@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eve_characters",
+  "info": {
+    "singularName": "eve-character",
+    "pluralName": "eve-characters",
+    "displayName": "EVE Character",
+    "description": "EVE Online character profiles with summary data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "character_id": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "birthday": {
+      "type": "datetime"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race_id": {
+      "type": "integer"
+    },
+    "bloodline_id": {
+      "type": "integer"
+    },
+    "corporation_id": {
+      "type": "integer"
+    },
+    "corporation_name": {
+      "type": "string"
+    },
+    "alliance_id": {
+      "type": "integer"
+    },
+    "security_status": {
+      "type": "float"
+    },
+    "title": {
+      "type": "string"
+    },
+    "total_sp": {
+      "type": "biginteger"
+    },
+    "unallocated_sp": {
+      "type": "biginteger"
+    },
+    "wallet_balance": {
+      "type": "float"
+    },
+    "skill_count": {
+      "type": "integer"
+    },
+    "asset_count": {
+      "type": "integer"
+    },
+    "blueprint_count": {
+      "type": "integer"
+    },
+    "active_industry_jobs": {
+      "type": "integer"
+    },
+    "owner_character_id": {
+      "type": "string"
+    },
+    "has_token": {
+      "type": "boolean",
+      "default": false
+    },
+    "portrait_url": {
+      "type": "string"
+    },
+    "top_skills": {
+      "type": "json"
+    },
+    "wallet_summary": {
+      "type": "json"
+    },
+    "skill_queue": {
+      "type": "json"
+    },
+    "attributes": {
+      "type": "json"
+    },
+    "last_synced": {
+      "type": "datetime"
+    }
+  }
+}
