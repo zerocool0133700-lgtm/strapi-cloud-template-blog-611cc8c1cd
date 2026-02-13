@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "market_opportunities",
+  "info": {
+    "singularName": "market-opportunity",
+    "pluralName": "market-opportunities",
+    "displayName": "Market Opportunity",
+    "description": "EVE Online market analysis opportunities"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "opportunity_type": {
+      "type": "enumeration",
+      "enum": ["arbitrage", "manufacturing", "trade_volume"],
+      "required": true
+    },
+    "item_name": {
+      "type": "string",
+      "required": true
+    },
+    "type_id": {
+      "type": "integer"
+    },
+    "buy_region": {
+      "type": "string"
+    },
+    "sell_region": {
+      "type": "string"
+    },
+    "buy_price": {
+      "type": "float"
+    },
+    "sell_price": {
+      "type": "float"
+    },
+    "profit": {
+      "type": "float"
+    },
+    "margin_percent": {
+      "type": "float"
+    },
+    "volume": {
+      "type": "biginteger"
+    },
+    "details": {
+      "type": "richtext"
+    },
+    "report_date": {
+      "type": "date",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category"
+    },
+    "metadata": {
+      "type": "json"
+    }
+  }
+}
